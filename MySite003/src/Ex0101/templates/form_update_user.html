@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Ex01</title>
+    </head>
+    <body>
+        <h1>Update</h1>
+        <form method="post" action="{% url 'backend02' id_user %}">
+            {% csrf_token %}
+            Full Name : <input type="text" name="Full_Name" value="{{d.Full_Name}}"><br>
+            E-mal     : <input type="email" name="Email" value="{{d.Email}}"><br>
+            Age       : <input type="number" name="Age" value="{{d.Age}}"><br>
+            Birth Day : <input type="date" name="Birth_Day" value="{{d.Birth_Day}}"><br>
+            <input type="submit" value="Update Data">
+        </form>
+    </body>
+</html>

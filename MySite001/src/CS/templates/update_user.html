@@ -1,0 +1,15 @@
+{%extends "index.html"%}
+{% load static %}
+
+{%block home%}
+<h1> Update Here </h1>
+  <form method="post" action="{% url 'CS:backend02' id %}">
+    {% csrf_token %}
+    Full Name : <input type="text" name="name"><br>
+    E-mail    : <input type="email" name="Email"><br>
+    Age       : <input type="number" name="age"><br>
+    Birthday  : <input type="date" name="date"><br>
+    <input type="submit" value="update data">
+  </form>
+
+{%endblock%}

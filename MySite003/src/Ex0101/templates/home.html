@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Ex01</title>
+    </head>
+    <body>
+        <h1>Welcom This All Data in Database</h1>
+        <table border="3px">
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Birth Day</th>
+                <th>Update User</th>
+                <th>Delete User</th>
+            </tr>
+            {% for d in data  %}
+            <tr>
+                <td>{{d.id}}</td>
+                <td>{{d.Full_Name}}</td>
+                <td>{{d.Email}}</td>
+                <td>{{d.Age}}</td>
+                <td>{{d.Birth_Day}}</td>
+                <td> <a href="{% url 'update_user' d.id %}"> Update </a> </td>
+                <td> <a href="{% url 'delete_user' d.id %}"> delete </a> </td>
+            </tr>
+            {%endfor%}
+        </table>
+        <p>To Add New One </p>
+        <a href="{% url 'create_user' %}">Create User</a>
+    </body>
+</html>

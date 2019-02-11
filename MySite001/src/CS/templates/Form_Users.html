@@ -1,0 +1,15 @@
+{%extends "index.html"%}
+{% load static %}
+
+{%block home%}
+
+  <h1> Register Here </h1>
+    <form method="post" action="{% url 'backend01' %}">
+      {% csrf_token %}
+      Full Name : <input type="text" name="name"><br>
+      E-mail    : <input type="email" name="Email"><br>
+      Age       : <input type="number" name="age"><br>
+      Birthday  : <input type="date" name="date"><br>
+      <input type="submit" value="send data">
+    </form>
+{%endblock%}

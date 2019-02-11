@@ -1,0 +1,22 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> django 2 </title>
+    <link href="{% static 'CS/css/base.css' %}"  rel="stylesheet" >
+  </head>
+  <body>
+    <div class='one'>
+      {%block des %}
+      
+      {% endblock %}
+    </div>
+    <div class='two'>
+      {%block two%}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>

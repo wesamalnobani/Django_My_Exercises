@@ -1,0 +1,12 @@
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>Profile</title>
+	</head>
+	<body>
+		{% if request.user.is_authenticated %}
+    Welcome {{u}}
+	  <a href="{% url 'logout_backend' %}"> Logout </a>
+		{%endif%}
+	</body>
+</html>

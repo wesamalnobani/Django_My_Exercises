@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>Ex02</title>
+	</head>
+	<body>
+    Welcom {{user.username}}
+    <h3>{{user.Email}}</h3>
+    <h3>{{user.Birth_Day}}</h3>
+    {%for i in inf%}
+    <h4>{{i.job}}</h4>
+    <h4>{{i.lang}}</h4>
+    <h4>{{i.num}}</h4>
+    {%endfor%}
+	</body>
+</html>

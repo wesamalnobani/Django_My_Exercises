@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>Ex02</title>
+	</head>
+	<body>
+    <form method="post" action="{% url 'info_backend' username %}">
+      {%csrf_token%}
+      <label>Jobs</label>
+      <input type="text" name="jobs"><br>
+      <label>lang</label>
+      <input type="text" name="lang"><br>
+      <label>Num</label>
+      <input type="number" name="num"><br>
+      <input type="submit" value="Register info">
+    </form>
+	</body>
+</html>

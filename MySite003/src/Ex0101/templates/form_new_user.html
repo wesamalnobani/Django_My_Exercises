@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Ex01 Form</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <form method="post" action="{% url 'backend01' %}">
+            {% csrf_token %}
+            Full Name : <input type="text" name="Full_Name" value=""><br>
+            E-mal     : <input type="email" name="Email" value=""><br>
+            Age       : <input type="number" name="Age" value=""><br>
+            Birth Day : <input type="date" name="Birth_Day" value=""><br>
+            <input type="submit" value="Send Data">
+        </form>
+    </body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>Ex01</title>
+	</head>
+	<body>
+	</body>
+</html>
+-->

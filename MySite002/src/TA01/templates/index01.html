@@ -1,0 +1,29 @@
+{%extends 'page01.html'%}
+
+{%block style02%}
+    <a href='{%url 'html'%}'>HTML</a><br>
+    <a href='{%url 't01' 20 16%}'>Test01</a><br>
+    <a href='{%url 't02' 'Wesam AL-Nobani'  36%}'>Test02</a><br>
+    <a href='{%url 't03' 'Wesam AL-Nobani'  20 16%}'>Test03</a><br>
+    {%for s in l%}
+    {{s}}
+    <br>
+    {%endfor%}
+    {%include 'page02.html'%}
+{%endblock%}
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>YouTaxPro</title>
+  </head>
+  <body>
+    <h1>First test</h1>
+  </body>
+</html>
+-->
